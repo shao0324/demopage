@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <script defer src="./modal.js"></script>
+
+  <style>
+    /* .custom-tab {
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+    } */
+  </style>
+
+</head>
+
+<body>
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Slides -->
+    <div class="carousel-inner text-center">
+      <div class="item active">
+        <center><img src="img/banner-01-large.jpg" class="img-responsive visible-lg" style="width:100%; height:auto;"
+            alt="Image 1"></center>
+        <center><img src="img/banner-01-mid.jpg" class="img-responsive visible-md" style="width:100%; height:auto;"
+            alt="Image 1"></center>
+        <center><img src="img/banner-01-mid.jpg" class="img-responsive visible-xs" style="width:100%; height:auto;"
+            alt="Image 1"></center>
+        <div class="carousel-caption">
+          <h3>Image 1</h3>
+          <p>Description for Image 1</p>
+        </div>
+      </div>
+      <div class="item">
+        <center><img src="img/banner-02-large.jpg" class="img-responsive visible-lg" style="width:100%; height:auto;"
+            alt="Image 2"></center>
+        <center><img src="img/banner-02-mid.jpg" class="img-responsive visible-md" style="width:100%; height:auto;"
+            alt="Image 2"></center>
+        <center><img src="img/banner-02-mid.jpg" class="img-responsive visible-xs" style="width:100%; height:auto;"
+            alt="Image 2"></center>
+        <div class="carousel-caption">
+          <h3>Image 2</h3>
+          <p>Description for Image 2</p>
+        </div>
+      </div>
+      <div class="item">
+        <center><img src="img/banner-03-large.jpg" class="img-responsive visible-lg" style="width:100%; height:auto;"
+            alt="Image 3"></center>
+        <center><img src="img/banner-03-mid.jpg" class="img-responsive visible-md" style="width:100%; height:auto;"
+            alt="Image 3"></center>
+        <center><img src="img/banner-03-mid.jpg" class="img-responsive visible-xs" style="width:100%; height:auto;"
+            alt="Image 3"></center>
+        <div class="carousel-caption">
+          <h3>Image 3</h3>
+          <p>Description for Image 3</p>
+        </div>
+      </div>
+      <div class="item">
+        <center><img src="img/banner-04-large.jpg" class="img-responsive visible-lg" style="width:100%; height:auto;"
+            alt="Image 4"></center>
+        <center><img src="img/banner-04-mid.jpg" class="img-responsive visible-md" style="width:100%; height:auto;"
+            alt="Image 4"></center>
+        <center><img src="img/banner-04-mid.jpg" class="img-responsive visible-xs" style="width:100%; height:auto;"
+            alt="Image 4"></center>
+        <div class="carousel-caption">
+          <h3>Image 3</h3>
+          <p>Description for Image 3</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <div class="jumbotron text-center">
+    <h1>Wellcome To ~!@#$%^&*</h1>
+    <p>Resize this responsive page to see the effect!</p>
+  </div>
+
+  <!-- Tab control -->
+  <div class="container mt-5">
+    <ul class="nav nav-tabs custom-tab" id="myTabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about"
+          aria-selected="true">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="product-tab" data-toggle="tab" href="#product" role="tab" aria-controls="product"
+          aria-selected="false">Product</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+          aria-selected="false">Contact</a>
+      </li>
+
+      <li class="dropdown">
+        <a href="#" id="myTabDrop1" class="dropdown-toggle" 
+           data-toggle="dropdown">Java 
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+          <li><a href="#jmeter" tabindex="-1" data-toggle="tab">jmeter</a></li>
+          <li><a href="#ejb" tabindex="-1" data-toggle="tab">ejb</a></li>
+        </ul>
+      </li>
+      
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+
+        <div class="container mt-3">
+          <div class="row">
+            <!-- 左欄 -->
+            <div class="col-md-6">
+              <h2>文字介紹</h2>
+              <h3>Home Content</h3>
+              <p>This is the content for the Home tab.</p>
+            </div>
+            <!-- 右欄 -->
+            <div class="col-md-6">
+              <img src="path/to/your/image.jpg" alt="圖片" class="img-fluid">
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="tab-pane fade" id="product" role="tabpanel" aria-labelledby="product-tab">
+
+        <!-- Product Display -->
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <h3>Column 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              <img src="img/prod-01.png" alt="Image 1" class="img-thumbnail" data-toggle="modal"
+                data-target="#imageModal" data-description="Description for Image 1">
+            </div>
+            <div class="col-sm-4">
+              <h3>Column 2</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              <img src="img/prod-02.png" alt="Image 2" class="img-thumbnail" data-toggle="modal"
+                data-target="#imageModal" data-description="Description for Image 2">
+            </div>
+            <div class="col-sm-4">
+              <h3>Column 3</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              <img src="img/prod-03.png" alt="Image 3" class="img-thumbnail" data-toggle="modal"
+                data-target="#imageModal" data-description="Description for Image 3">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <h3>Column 4</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              <img src="img/prod-04.png" alt="Image 1" class="img-thumbnail" data-toggle="modal"
+                data-target="#imageModal" data-description="Description for Image 1">
+            </div>
+            <div class="col-sm-4">
+              <h3>Column 5</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              <img src="img/prod-05.png" alt="Image 2" class="img-thumbnail" data-toggle="modal"
+                data-target="#imageModal" data-description="Description for Image 2">
+            </div>
+            <div class="col-sm-4">
+              <h3>Column 6</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              <img src="img/prod-06.png" alt="Image 3" class="img-thumbnail" data-toggle="modal"
+                data-target="#imageModal" data-description="Description for Image 3">
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-body">
+                <center><img src="" alt="Preview Image" class="img-responsive" id="previewImage"></center>
+                <p id="imageDescription"></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+        <!-- Contact Us -->
+        <div class="container mt-5">
+          <h2>Contact Us</h2>
+          <form>
+            <div class="form-group">
+              <label for="name">Your Name:</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email address:</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+          
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Circular Button -->
+  <div class="floating-buttons">
+    <div class="btn-group-vertical">
+      <button class="btn btn-success" onclick="">
+        <span class="glyphicon glyphicon glyphicon-bookmark"></span>
+      </button>
+      <button class="btn btn-info" onclick="">
+        <span class="glyphicon glyphicon-info-sign"></span>
+      </button>
+      <button class="btn btn-warning" onclick="">
+        <span class="glyphicon glyphicon glyphicon-envelope"></span>
+      </button>
+      <button class="btn back-to-top" data-toggle="tooltip" data-placement="left" title="Back to Top"
+        onclick="scrollToTop()">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </button>
+    </div>
+  </div>
+
+  <section>
+    <!-- Add your content here -->
+  </section>
+
+  <section>
+    <!-- Add your content here -->
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Services</h3>
+          <ul style="list-style-type: none; padding: 0;">
+            <li>Service 1</li>
+            <li>Service 2</li>
+            <li>Service 3</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h3>Contact</h3>
+          <p>Email: <a href="mailto:info@yourbusiness.com">info@yourbusiness.com</a></p>
+          <p>Phone: +1 (123) 456-7890</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      &copy; 2022 Fake Business Name. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+
+</html>
