@@ -336,17 +336,16 @@
   <!-- Floating Circular Button -->
   <div class="floating-buttons">
     <div class="btn-group-vertical">
-      <button class="btn btn-success" onclick="">
+      <button class="btn btn-success" onclick="AddFavorite('demopage', location.href)">
         <span class="glyphicon glyphicon glyphicon-bookmark"></span>
       </button>
-      <button class="btn btn-info" onclick="">
-        <span class="glyphicon glyphicon-info-sign"></span>
+      <button class="btn btn-info" onclick="toDesktop(location.href, 'demopage')">
+        <span class="glyphicon glyphicon-download-alt"></span>
       </button>
       <button class="btn btn-warning" onclick="">
         <span class="glyphicon glyphicon glyphicon-envelope"></span>
       </button>
-      <button class="btn back-to-top" data-toggle="tooltip" data-placement="left" title="Back to Top"
-        onclick="scrollToTop()">
+      <button class="btn back-to-top" data-toggle="tooltip" data-placement="left" title="Back to Top" onclick="scrollToTop()">
         <span class="glyphicon glyphicon-chevron-up"></span>
       </button>
     </div>
