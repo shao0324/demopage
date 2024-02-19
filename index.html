@@ -107,79 +107,87 @@
         <a class="nav-link active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about"
           aria-selected="true">About</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" id="product-tab" data-toggle="tab" href="#product" role="tab" aria-controls="product"
+      <!-- <li class="nav-item">
+        <a class="nav-link" id="product-tab" data-toggle="tab" href="#series-a" role="tab" aria-controls="series-a"
           aria-selected="false">Product</a>
+      </li> -->
+      <li class="dropdown">
+        <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Products
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+          <li><a href="#series-a" tabindex="-1" data-toggle="tab">Series A</a></li>
+          <li><a href="#series-b" tabindex="-1" data-toggle="tab">Series B</a></li>
+        </ul>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
           aria-selected="false">Contact</a>
       </li>
 
-      <li class="dropdown">
-        <a href="#" id="myTabDrop1" class="dropdown-toggle" 
-           data-toggle="dropdown">Java 
-          <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-          <li><a href="#jmeter" tabindex="-1" data-toggle="tab">jmeter</a></li>
-          <li><a href="#ejb" tabindex="-1" data-toggle="tab">ejb</a></li>
-        </ul>
-      </li>
-      
     </ul>
 
     <div class="tab-content">
-      <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
 
-        <div class="container mt-3">
+      <!-- About Us -->
+      <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">
+        <div class="container" style="padding-right: 75px">
           <div class="row">
-            <!-- 左欄 -->
-            <div class="col-md-6">
-              <h2>文字介紹</h2>
-              <p>Global Innovations Ltd. is a dynamic and forward-thinking company at the forefront of innovation in the technology sector. Established in 2010, we have rapidly grown into a leading player, providing cutting-edge solutions to meet the evolving needs of businesses worldwide.</p>
+            <div class="col-sm-6">
+              <h2>About</h2>
+              <p>Global Innovations Ltd. is a dynamic and forward-thinking company at the forefront of innovation in the
+                technology sector. Established in 2010, we have rapidly grown into a leading player, providing
+                cutting-edge solutions to meet the evolving needs of businesses worldwide.</p>
               <h3>Our Mission</h3>
-              <p>At Global Innovations Ltd., our mission is to empower businesses with innovative technology solutions that drive growth, efficiency, and sustainability. We believe in harnessing the power of creativity and technology to create a positive impact on the world.</p>
+              <p>At Global Innovations Ltd., our mission is to empower businesses with innovative technology solutions
+                that drive growth, efficiency, and sustainability. We believe in harnessing the power of creativity and
+                technology to create a positive impact on the world.</p>
               <h3>Core Competencies</h3>
-              <p>Our core competencies lie in developing state-of-the-art software applications, designing intuitive user interfaces, and providing comprehensive IT consulting services. Whether you are a startup seeking a digital presence or an established enterprise looking to optimize your operations, we have the expertise to tailor solutions to your unique requirements.</p>
+              <p>Our core competencies lie in developing state-of-the-art software applications, designing intuitive
+                user interfaces, and providing comprehensive IT consulting services. Whether you are a startup seeking a
+                digital presence or an established enterprise looking to optimize your operations, we have the expertise
+                to tailor solutions to your unique requirements.</p>
               <h3>Products and Services</h3>
-              <p>Innovation is not just a buzzword for us; it's at the core of everything we do. Our R&D team is constantly exploring emerging technologies to stay ahead of the curve and provide our clients with the most advanced solutions. We embrace a culture of continuous learning, ensuring that our team is well-equipped to navigate the ever-changing landscape of the tech industry.</p>
+              <p>Innovation is not just a buzzword for us; it's at the core of everything we do. Our R&D team is
+                constantly exploring emerging technologies to stay ahead of the curve and provide our clients with the
+                most advanced solutions. We embrace a culture of continuous learning, ensuring that our team is
+                well-equipped to navigate the ever-changing landscape of the tech industry.</p>
               <h3>Global Reach</h3>
-              <p>Headquartered in the vibrant tech hub of Silicon Valley, we have a global footprint with offices and partners across North America, Europe, and Asia. Our international presence enables us to serve clients on a global scale, understanding and adapting to the unique challenges of different markets.</p>
+              <p>Headquartered in the vibrant tech hub of Silicon Valley, we have a global footprint with offices and
+                partners across North America, Europe, and Asia. Our international presence enables us to serve clients
+                on a global scale, understanding and adapting to the unique challenges of different markets.</p>
             </div>
-            <!-- 右欄 -->
-            <div class="col-md-6">
-              <!-- <img src="img/about.jpg" alt="Image 3" class="img-thumbnail" data-toggle="modal"
-                data-target="#imageModal" data-description="Description for Image 3"> -->
+            <div class="col-sm-6">
+              <img src="img/about.jpg" alt="Image 3" class="img-thumbnail" style="margin: 20px" data-toggle="modal"
+                data-target="#imageModal" data-description="Description for Image 3">
             </div>
           </div>
         </div>
-
       </div>
-      <div class="tab-pane fade" id="product" role="tabpanel" aria-labelledby="product-tab">
 
-        <!-- Product Display -->
-        <div class="container">
+      <!-- Product Series A -->
+      <div class="tab-pane fade" id="series-a" role="tabpanel" aria-labelledby="series-a-tab">
+        <div class="container" style="padding-right: 50px">
           <div class="row">
             <div class="col-sm-4">
               <h3>Column 1</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
               <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-              <img src="img/prod-01.png" alt="Image 1" class="img-thumbnail" data-toggle="modal"
+              <img src="img/a-prod-01.png" alt="Image 1" class="img-thumbnail" data-toggle="modal"
                 data-target="#imageModal" data-description="Description for Image 1">
             </div>
             <div class="col-sm-4">
               <h3>Column 2</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
               <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-              <img src="img/prod-02.png" alt="Image 2" class="img-thumbnail" data-toggle="modal"
+              <img src="img/a-prod-02.png" alt="Image 2" class="img-thumbnail" data-toggle="modal"
                 data-target="#imageModal" data-description="Description for Image 2">
             </div>
             <div class="col-sm-4">
               <h3>Column 3</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
               <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-              <img src="img/prod-03.png" alt="Image 3" class="img-thumbnail" data-toggle="modal"
+              <img src="img/a-prod-03.png" alt="Image 3" class="img-thumbnail" data-toggle="modal"
                 data-target="#imageModal" data-description="Description for Image 3">
             </div>
           </div>
@@ -188,47 +196,105 @@
               <h3>Column 4</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
               <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-              <img src="img/prod-04.png" alt="Image 1" class="img-thumbnail" data-toggle="modal"
-                data-target="#imageModal" data-description="Description for Image 1">
+              <img src="img/a-prod-04.png" alt="Image 4" class="img-thumbnail" data-toggle="modal"
+                data-target="#imageModal" data-description="Description for Image 4">
             </div>
             <div class="col-sm-4">
               <h3>Column 5</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
               <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-              <img src="img/prod-05.png" alt="Image 2" class="img-thumbnail" data-toggle="modal"
-                data-target="#imageModal" data-description="Description for Image 2">
+              <img src="img/a-prod-05.png" alt="Image 5" class="img-thumbnail" data-toggle="modal"
+                data-target="#imageModal" data-description="Description for Image 5">
             </div>
             <div class="col-sm-4">
               <h3>Column 6</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
               <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-              <img src="img/prod-06.png" alt="Image 3" class="img-thumbnail" data-toggle="modal"
+              <img src="img/a-prod-06.png" alt="Image 6" class="img-thumbnail" data-toggle="modal"
+                data-target="#imageModal" data-description="Description for Image 6">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Series B -->
+      <div class="tab-pane fade" id="series-b" role="tabpanel" aria-labelledby="imageModalLabel">
+        <div class="container" style="padding-right: 50px">
+          <div class="row">
+            <div class="col-sm-4">
+              <h3>Column 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              <img src="img/b-prod-01.jpg" alt="Image 1" class="img-thumbnail" data-toggle="modal"
+                data-target="#imageModal" data-description="Description for Image 1">
+            </div>
+            <div class="col-sm-4">
+              <h3>Column 2</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              <img src="img/b-prod-02.jpg" alt="Image 2" class="img-thumbnail" data-toggle="modal"
+                data-target="#imageModal" data-description="Description for Image 2">
+            </div>
+            <div class="col-sm-4">
+              <h3>Column 3</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              <img src="img/b-prod-03.jpg" alt="Image 3" class="img-thumbnail" data-toggle="modal"
                 data-target="#imageModal" data-description="Description for Image 3">
             </div>
           </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-body">
-                <center><img src="" alt="Preview Image" class="img-responsive" id="previewImage"></center>
-                <p id="imageDescription"></p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <h3>Column 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              <img src="img/b-prod-04.jpg" alt="Image 4" class="img-thumbnail" data-toggle="modal"
+                data-target="#imageModal" data-description="Description for Image 4">
+            </div>
+            <div class="col-sm-4">
+              <h3>Column 2</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              <img src="img/b-prod-05.jpg" alt="Image 5" class="img-thumbnail" data-toggle="modal"
+                data-target="#imageModal" data-description="Description for Image 5">
             </div>
           </div>
         </div>
-
       </div>
+
+      <!-- Contact -->
       <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
 
-        <!-- Contact Us -->
-        <div class="container mt-5">
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous"
+          src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v19.0&appId=1941006219547285"
+          nonce="Fxgul9Ca"></script>
+
+        <div class="fb-comments" data-href="https://shao0324.github.io/demopage/" data-width="auto" data-numposts="5">
+        </div>
+
+        <div id="disqus_thread"></div>
+        <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          /*
+          var disqus_config = function () {
+          this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          */
+          (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://EXAMPLE.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+
+        <div class="container mt-5" style="padding-right: 75px">
           <h2>Contact Us</h2>
           <form>
             <div class="form-group">
@@ -246,7 +312,23 @@
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
-          
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+          <center><img src="" alt="Preview Image" class="img-responsive" id="previewImage" style="width:500px; height:auto;" ></center>
+          <p id="imageDescription"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
