@@ -9,10 +9,10 @@ function scrollToTop() {
 }
 
 // JavaScript to set default tab
-$(document).ready(function () {
-  // 選擇默認顯示的 tab id
-  $('#myTabs a[href="#about"]').tab("show");
-});
+// $(document).ready(function () {
+//   // 選擇默認顯示的 tab id
+//   $('#myTabs a[href="#about"]').tab("show");
+// });
 
 // Add to favorite
 function AddFavorite(title, url) {
