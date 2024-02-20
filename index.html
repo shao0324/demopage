@@ -2,9 +2,12 @@
 <html lang="en">
 
 <head>
-  <title>Bootstrap Example</title>
+  <title>Demo Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -24,12 +27,19 @@
 
 <body>
 
+  <nav class="navbar navbar-default bg-light navbar-fixed-top">
+    <div class="container-fluid">
+      <center><a class="navbar-brand" href="#"><img src="logo.png" alt="" width="30" height="24" ></a></center>
+    </div>
+  </nav>
+
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
     <!-- Slides -->
@@ -78,8 +88,8 @@
         <center><img src="img/banner-04-mid.jpg" class="img-responsive visible-xs" style="width:100%; height:auto;"
             alt="Image 4"></center>
         <div class="carousel-caption">
-          <h3>Image 3</h3>
-          <p>Description for Image 3</p>
+          <h3>Image 4</h3>
+          <p>Description for Image 4</p>
         </div>
       </div>
     </div>
