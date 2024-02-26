@@ -22,7 +22,7 @@
 
 /* footer */
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
@@ -58,3 +58,39 @@ footer {
   min-width: 200px;
   margin: 10px;
 }
+
+/* image jump */
+.img-jump {
+  position: relative;
+}
+
+.img-jump:hover {
+  animation: jump 0.5s forwards;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Add custom style to make borders tight around the image */
+.img-tight-border {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+/* change tab button style */
+/* .custom-tab {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+} */
