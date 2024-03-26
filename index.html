@@ -20,9 +20,34 @@
 
 <body>
 
-  <nav class="navbar navbar-default bg-light navbar-fixed-top">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
-      <center><a class="navbar-brand" href="#"><img src="logo.png" alt="" width="auto" height="24"></a></center>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myTabs">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <!-- <a class="navbar-brand" href="#"><img src="logo.png" alt="" width="auto" height="49"></a> -->
+      </div>
+      
+      <div class="collapse navbar-collapse" id="myTabs">
+        <ul class="nav navbar-nav navbar-right" style="margin-top: 20px; margin-bottom: 20px; margin-right: 100px;" id="#menu-main">
+          <li class="nav-item">
+            <a class="nav-link active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="true">公司介紹</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">服務項目<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+              <li><a href="#series-a" tabindex="-1" data-toggle="tab">Series A</a></li>
+              <li><a href="#series-b" tabindex="-1" data-toggle="tab">Series B</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">聯絡我們</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -98,48 +123,24 @@
     </a>
   </div> -->
 
+  <div class="jumbotron text-center">
+    <!-- <h1>台屹科技</h1>
+    <h2>品質第一 服務至上</h2>
+    <p>CNC電腦 銑床 3D 4D 程式設計 四軸半 模具 雕刻 凸輪 機械零件加工製造</p> -->
   <!-- Banner with Slogan -->
-  <div class="banner">
-    <div class="slogan">
-      <h1 style="font-weight: bolder">台屹科技</h1>
-      <h3 style="font-weight: bolder">品質第一 服務至上</h3>
-      <p style="margin-top: 50px">CNC電腦 銑床 3D 4D 程式設計 四軸半 模具 雕刻 凸輪 機械零件加工製造</p>
-      <!-- <img src="logo.png" alt="" width="auto" height="24"> -->
+    <div class="banner">
+      <div class="slogan">
+        <h1 style="font-weight: bolder">台屹科技</h1>
+        <h3 style="font-weight: bolder">品質第一 服務至上</h3>
+        <p style="margin-top: 50px">CNC電腦 銑床 3D 4D 程式設計 四軸半 模具 雕刻 凸輪 機械零件加工製造</p>
+        <!-- <img src="logo.png" alt="" width="auto" height="24"> -->
+      </div>
     </div>
   </div>
 
-  <!-- <div class="jumbotron text-center">
-    <h1>台屹科技</h1>
-    <h2>品質第一 服務至上</h2>
-    <p>CNC電腦 銑床 3D 4D 程式設計 四軸半 模具 雕刻 凸輪 機械零件加工製造</p>
-  </div> -->
-
   <!-- Tab control -->
   <div class="container mt-5">
-    <ul class="nav nav-tabs custom-tab" id="myTabs" role="tablist">
-      <li class="nav-item">
-        <a class="nav-link active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about"
-          aria-selected="true">公司介紹</a>
-      </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link" id="product-tab" data-toggle="tab" href="#series-a" role="tab" aria-controls="series-a"
-          aria-selected="false">Product</a>
-      </li> -->
-      <li class="dropdown">
-        <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">服務項目
-          <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-          <li><a href="#series-a" tabindex="-1" data-toggle="tab">Series A</a></li>
-          <li><a href="#series-b" tabindex="-1" data-toggle="tab">Series B</a></li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-          aria-selected="false">聯絡我們</a>
-      </li>
-
-    </ul>
+    
 
     <div class="tab-content">
 
@@ -380,7 +381,7 @@
           <p id="imageDescription"></p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
