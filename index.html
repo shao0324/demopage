@@ -15,28 +15,28 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
   <script defer src="./modal.js"></script>
-
+  
 </head>
 
 <body>
 
   <nav class="navbar navbar-default bg-light navbar-fixed-top">
     <div class="container-fluid">
-      <center><a class="navbar-brand" href="#"><img src="logo.png" alt="" width="30" height="24" ></a></center>
+      <center><a class="navbar-brand" href="#"><img src="logo.png" alt="" width="auto" height="24" ></a></center>
     </div>
   </nav>
 
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel"> -->
     <!-- Indicators -->
-    <ol class="carousel-indicators">
+    <!-- <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
       <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
+    </ol> -->
 
     <!-- Slides -->
-    <div class="carousel-inner text-center">
+    <!-- <div class="carousel-inner text-center">
       <div class="item active">
         <center><img src="img/banner-01-large.jpg" class="img-responsive visible-lg" style="width:100%; height:auto;"
             alt="Image 1"></center>
@@ -85,10 +85,10 @@
           <p>Description for Image 4</p>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left"></span>
       <span class="sr-only">Previous</span>
     </a>
@@ -96,26 +96,36 @@
       <span class="glyphicon glyphicon-chevron-right"></span>
       <span class="sr-only">Next</span>
     </a>
+  </div> -->
+
+  <!-- Banner with Slogan -->
+  <div class="banner">
+    <div class="slogan">
+      <h1>台屹科技</h1>
+      <h2>品質第一 服務至上</h2>
+      <p>CNC電腦 銑床 3D 4D 程式設計 四軸半 模具 雕刻 凸輪 機械零件加工製造</p>
+    </div>
   </div>
 
-  <div class="jumbotron text-center">
-    <h1>Wellcome To ~!@#$%^&*</h1>
-    <p>Resize this responsive page to see the effect!</p>
-  </div>
+  <!-- <div class="jumbotron text-center">
+    <h1>台屹科技</h1>
+    <h2>品質第一 服務至上</h2>
+    <p>CNC電腦 銑床 3D 4D 程式設計 四軸半 模具 雕刻 凸輪 機械零件加工製造</p>
+  </div> -->
 
   <!-- Tab control -->
   <div class="container mt-5">
     <ul class="nav nav-tabs custom-tab" id="myTabs" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about"
-          aria-selected="true">About</a>
+          aria-selected="true">公司介紹</a>
       </li>
       <!-- <li class="nav-item">
         <a class="nav-link" id="product-tab" data-toggle="tab" href="#series-a" role="tab" aria-controls="series-a"
           aria-selected="false">Product</a>
       </li> -->
       <li class="dropdown">
-        <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Products
+        <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">服務項目
           <b class="caret"></b>
         </a>
         <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
@@ -125,7 +135,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-          aria-selected="false">Contact</a>
+          aria-selected="false">聯絡我們</a>
       </li>
 
     </ul>
@@ -135,43 +145,29 @@
       <!-- About Us -->
       <div class="tab-pane fade in active" id="about" role="tabpanel" aria-labelledby="about-tab">
         <div class="container" style="padding-right: 75px">
+          <h2 style="margin-top: 25px; border-bottom: 5px solid #2421b1; display: inline-block; padding-bottom: 5px;">關於台屹科技</h2>
           <div class="row">
             <div class="col-sm-6">
-              <h2>About</h2>
-              <p>Global Innovations Ltd. is a dynamic and forward-thinking company at the forefront of innovation in the
-                technology sector. Established in 2010, we have rapidly grown into a leading player, providing
-                cutting-edge solutions to meet the evolving needs of businesses worldwide.</p>
-              <h3>Our Mission</h3>
-              <p>At Global Innovations Ltd., our mission is to empower businesses with innovative technology solutions
-                that drive growth, efficiency, and sustainability. We believe in harnessing the power of creativity and
-                technology to create a positive impact on the world.</p>
-              <h3>Core Competencies</h3>
-              <p>Our core competencies lie in developing state-of-the-art software applications, designing intuitive
-                user interfaces, and providing comprehensive IT consulting services. Whether you are a startup seeking a
-                digital presence or an established enterprise looking to optimize your operations, we have the expertise
-                to tailor solutions to your unique requirements.</p>
-              <h3>Products and Services</h3>
-              <p>Innovation is not just a buzzword for us; it's at the core of everything we do. Our R&D team is
-                constantly exploring emerging technologies to stay ahead of the curve and provide our clients with the
-                most advanced solutions. We embrace a culture of continuous learning, ensuring that our team is
-                well-equipped to navigate the ever-changing landscape of the tech industry.</p>
-              <h3>Global Reach</h3>
-              <p>Headquartered in the vibrant tech hub of Silicon Valley, we have a global footprint with offices and
-                partners across North America, Europe, and Asia. Our international presence enables us to serve clients
-                on a global scale, understanding and adapting to the unique challenges of different markets.</p>
+              <p style="margin-top: 25px">台亨機械股份有限公司位於北台灣，新北市樹林區，主要業務是專業於精密CNC銑床加工、車床加工、第四軸加工等精密機械零組件接單生產，同時提供金屬成形及表面處理、熱處理等服務，打造產業一條龍，擴展更多元，且提供穩定準確之精密產品，為了滿足現今CNC銑床加工高精度、高效率的需求，台亨機械在品質方面不斷精進以外，設備上也有百德QUASER跟永進YCM與數台日本brother立式加工機等，搭載NIKKEN等級的第四軸，以及軟體上導入MASTER CAM系統、使工件在對於3D 2D等的程式製作皆能迎刃而解，故而提升良率跟產品的穩定性，並滿足客戶端多樣性一站完成的需求。</p>
+              <!-- <h3>Our Mission</h3> -->
+              <p style="margin-top: 25px">台亨機械股份有限公司創立於西元1987年，成立近30年以來，公司堅持「品質第一」的經營方針並秉持著誠信的經營理念和服務至上的態度，我們滿足客戶的「各式客製化加工製造需求」、也是國內各大廠配合「量產」績優廠商之一。</p>
+              <!-- <h3>Core Competencies</h3> -->
+              <p style="margin-top: 25px">我們秉持專業用心，重視品質，誠信第一，各方面均受到各界客戶的信賴與肯定，並且竭盡所能提供客戶最完善之服務。這也是台亨機械永續經營之理念，以敦厚的心踏實在業界擁有好口碑。</p>
             </div>
             <div class="col-sm-6">
-              <img src="img/about.jpg" alt="Image 3" class="img-thumbnail" style="margin: 20px" data-toggle="modal"
-                data-target="#imageModal" data-description="Description for Image 3">
+              <!-- <img src="img/about.jpg" alt="Image 3" class="img-thumbnail" style="margin: 20px" data-toggle="modal"
+                data-target="#imageModal" data-description="Description for Image 3"> -->
+                <img src="img/about1.jpg" alt="about" class="img-tight-border" style="margin: 20px" align="middle"/>
             </div>
           </div>
         </div>
 
-        <div class="container" style="padding-right: 75px">
+        <!-- <div classl style="list-style-type: none; padding: 0;">
+                 ="container" style="padding-right: 75px">
           <div class="row" style="padding: 20px">
             <div class="col-sm-4">
               <div class="thumbnail" style="padding: 0%; border-top: 0">
-                <!-- <img src="https://via.placeholder.com/300" alt="Service 1" class="img-tight-border img-jump"> -->
+                <img src="https://via.placeholder.com/300" alt="Service 1" class="img-tight-border img-jump">
                 <img src="img/service_pic01.jpg" alt="Service 1" class="img-tight-border img-jump">
                 <div class="caption" style="text-align: center;">
                   <h3 style="font-weight: bold;">以客為尊</h3>
@@ -199,16 +195,41 @@
                 <img src="img/service_pic03.jpg" alt="Service 1" class="img-tight-border img-jump">
                 <div class="caption" style="text-align: center;">
                   <h3 style="font-weight: bold;">學習成長</h3>
-                  <ul style="list-style-type: none; padding: 0;">
-                    <li>安排學習環境</li>
+                  <u   <li>安排學習環境</li>
                     <li>分享成長經驗</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
+        </div> -->
+
+        <style>
+          .embed-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+          }
+        
+          .embed-container iframe,
+          .embed-container object,
+          .embed-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        </style>
+        <div class='embed-container'>
+          <iframe
+            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14455.213291977252!2d121.4663028!3d25.0746544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a8beee8c95b3%3A0x64cf5c54d9d11c4d!2z5Y-w5bG556eR5oqAIENOQ-mbu-iFpumKkeW6iiA06Lu4IDQuNei7uCDmqKHlhbcgM0Tpm5XliLsg5Ye46LyqIOieuuahvyDpvZIo5qOYKei8qiDpm7bku7bliqDlt6U!5e0!3m2!1szh-TW!2stw!4v1711444010764!5m2!1szh-TW!2stw'
+            width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy'
+            referrerpolicy='no-referrer-when-downgrade'></iframe>
         </div>
-  
+
       </div>
 
       <!-- Product Series A -->
@@ -366,7 +387,7 @@
   <!-- Floating Circular Button -->
   <div class="floating-buttons">
     <div class="btn-group-vertical">
-      <button class="btn btn-success" onclick="AddFavorite('demopage', location.href)">
+      <!-- <button class="btn btn-success" onclick="AddFavorite('demopage', location.href)">
         <span class="glyphicon glyphicon glyphicon-bookmark"></span>
       </button>
       <button class="btn btn-info" onclick="toDesktop(location.href, 'demopage')">
@@ -374,8 +395,8 @@
       </button>
       <button class="btn btn-warning" onclick="">
         <span class="glyphicon glyphicon glyphicon-envelope"></span>
-      </button>
-      <button class="btn back-to-top" data-toggle="tooltip" data-placement="left" title="Back to Top" onclick="scrollToTop()">
+      </button> -->
+      <button class="btn back-to-top" data-toggle="tooltip" data-placement="left" title="回到頂端" onclick="scrollToTop()">
         <span class="glyphicon glyphicon-chevron-up"></span>
       </button>
     </div>
@@ -388,23 +409,30 @@
   <footer>
     <div class="container">
       <div class="row">
+        <h3>台屹科技</h3>
         <div class="col-md-6">
-          <h3>Services</h3>
+          <p>CNC電腦 銑床 3D 4D 程式設計</p>
+          <p>四軸半 模具 雕刻 凸輪</p>
+          <p>機械零件加工製造</p>
+          <!-- <h3>Services</h3>
           <ul style="list-style-type: none; padding: 0;">
-            <li>Service 1</li>
-            <li>Service 2</li>
-            <li>Service 3</li>
-          </ul>
+            <li>CNC電腦 銑床 3D 4D 程式設計</li>
+            <li>四軸半 模具 雕刻 凸輪</li>
+            <li>機械零件加工製造</li>
+          </ul> -->
         </div>
         <div class="col-md-6">
-          <h3>Contact</h3>
-          <p>Email: <a href="mailto:info@yourbusiness.com">info@yourbusiness.com</a></p>
-          <p>Phone: +1 (123) 456-7890</p>
+          <!-- <h3>台屹科技</h3> -->
+          <p><span class="glyphicon glyphicon-envelope"></span> service@taiyi0968.business.site</p>
+          <p><span class="glyphicon glyphicon-earphone"></span> 02-2980-1122</p>
+          <p><span class="glyphicon glyphicon-time"></span> 週一至週五 08:30 ~ 18:00</p>
+          <p><span class="glyphicon glyphicon-map-marker"></span> 248 新北市五股區中興路一段118巷6弄18號1樓</p>
         </div>
       </div>
     </div>
     <div class="container-fluid">
-      &copy; 2022 Fake Business Name. All rights reserved.
+      <p></p>
+      <p>&copy; 2024 All rights reserved.</p>
     </div>
   </footer>
 
