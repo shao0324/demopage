@@ -100,19 +100,36 @@ footer {
 /* Slogan styles */
 .slogan {
   position: absolute;
-  top: 30%; /* Position slogan at 50% from the top */
+  top: 50%; /* Position slogan at 50% from the top */
   left: 50%; /* Position slogan at 50% from the left */
   transform: translate(-50%, -50%); /* Center slogan horizontally and vertically */
   color: white; /* Text color */
   font-size: 24px; /* Adjust font size as needed */
 }
 
+@media (max-width: 767px) {
+  .slogan-xs {
+    position: absolute;
+    top: 30%; /* Position slogan at 50% from the top */
+    left: 50%; /* Position slogan at 50% from the left */
+    transform: translate(-50%, -50%); /* Center slogan horizontally and vertically */
+    color: white; /* Text color */
+    font-size: 24px; /* Adjust font size as needed */
+  }
+}
+
 .slogan h3 {
   white-space: nowrap;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .visible-xs-text {
+    display: none; /* show text on small screen  */
+  }
+}
+
+@media (max-width: 767px) {
+  .invisible-xs-text {
     display: none; /* hide text on small screen  */
   }
 }
@@ -144,4 +161,28 @@ footer {
 #menu-main a{
   display: block;
   padding: 10px;
+}
+
+/* 自定義可見於大型螢幕的 CSS 類 */
+.visible-lg-custom {
+  display: none; /* 首先將它設為隱藏 */
+}
+
+/* 在螢幕寬度大於768像素時顯示 */
+@media (min-width: 768px) {
+  .visible-lg-custom {
+      display: block; /* 顯示在大型螢幕上 */
+  }
+}
+
+/* 自定義小型螢幕的 CSS 類 */
+.visible-xs-custom {
+  display: none; /* 首先將它設為隱藏 */
+}
+
+/* 在螢幕寬度小於768像素時顯示 */
+@media (max-width: 767px) {
+  .visible-xs-custom {
+      display: block; /* 顯示在小型螢幕上 */
+  }
 }
