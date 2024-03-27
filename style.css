@@ -94,11 +94,30 @@ footer {
 .banner {
   position: relative;
   text-align: center;
-  background-image: url("img/banner2.jpg"); /* Replace 'path/to/banner-image.jpg' with the actual path to your banner image */
+  background-image: url("img/banner4.jpg"); /* Replace 'path/to/banner-image.jpg' with the actual path to your banner image */
   background-size: cover;
   background-position: center;
   width: 100%;
   height: 900px; /* Adjust the height as needed */
+}
+
+.banner {
+  position: relative;
+  text-align: center;
+  background-image: url("img/banner2.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 0; /* 初始高度为0 */
+  padding-top: 50%; /* 使用顶部填充设置高度为宽度的50% */
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* 可选：设置内容颜色 */
 }
 
 /* Slogan styles */
@@ -112,6 +131,14 @@ footer {
   ); /* Center slogan horizontally and vertically */
   color: white; /* Text color */
   font-size: 24px; /* Adjust font size as needed */
+}
+
+/* Footer styles */
+footer {
+  background-image: url("img/footer1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Remove the navbar's default margin-bottom and rounded borders */ 
