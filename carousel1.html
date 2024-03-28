@@ -16,7 +16,7 @@
         }
         next.children(':first-child').clone().appendTo($(this));
 
-        for (var i = 0; i < 4; i++) {
+        for (var i = 0; i < 1; i++) {
           next = next.next();
           if (!next.length) {
             next = $(this).siblings(':first');
@@ -90,15 +90,18 @@
 
     @media (min-width: 992px) {
       .carousel-inner .active.left {
-        left: -16.7%;
+        /* left: -16.7%; */
+        left: -25.0%;
       }
 
       .carousel-inner .next {
-        left: 16.7%;
+        /* left: 16.7%; */
+        left: 25.0%;
       }
 
       .carousel-inner .prev {
-        left: -16.7%;
+        /* left: -16.7%; */
+        left: -25.0%;
       }
     }
   </style>
@@ -114,36 +117,36 @@
     <div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="3000" id="myCarousel">
       <div class="carousel-inner">
         <div class="item active">
-          <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/e499e4/fff&text=1"
-                class="img-responsive"></a></div>
+          <div class="col-md-4 col-sm-6 col-xs-12"><a href="#"><img src="img/scene01.jpg" class="img-responsive"></a>
+          </div>
         </div>
         <div class="item">
-          <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/e477e4/fff&text=2"
-                class="img-responsive"></a></div>
+          <div class="col-md-4 col-sm-6 col-xs-12"><a href="#"><img src="img/scene02.jpg" class="img-responsive"></a>
+          </div>
         </div>
         <div class="item">
-          <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/eeeeee&text=3"
-                class="img-responsive"></a></div>
+          <div class="col-md-4 col-sm-6 col-xs-12"><a href="#"><img src="img/scene03.jpg" class="img-responsive"></a>
+          </div>
         </div>
         <div class="item">
-          <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/f4f4f4&text=4"
-                class="img-responsive"></a></div>
+          <div class="col-md-4 col-sm-6 col-xs-12"><a href="#"><img src="img/scene04.jpg" class="img-responsive"></a>
+          </div>
         </div>
         <div class="item">
-          <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/f566f5/333&text=5"
-                class="img-responsive"></a></div>
+          <div class="col-md-4 col-sm-6 col-xs-12"><a href="#"><img src="img/scene05.jpg" class="img-responsive"></a>
+          </div>
         </div>
         <div class="item">
-          <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/f477f4/fff&text=6"
-                class="img-responsive"></a></div>
+          <div class="col-md-4 col-sm-6 col-xs-12"><a href="#"><img src="img/scene06.jpg" class="img-responsive"></a>
+          </div>
         </div>
         <div class="item">
-          <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/eeeeee&text=7"
-                class="img-responsive"></a></div>
+          <div class="col-md-4 col-sm-6 col-xs-12"><a href="#"><img src="img/scene07.jpg" class="img-responsive"></a>
+          </div>
         </div>
         <div class="item">
-          <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/fcfcfc/333&text=8"
-                class="img-responsive"></a></div>
+          <div class="col-md-4 col-sm-6 col-xs-12"><a href="#"><img src="img/scene08.jpg" class="img-responsive"></a>
+          </div>
         </div>
       </div>
       <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i
