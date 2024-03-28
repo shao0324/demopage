@@ -42,7 +42,11 @@ section {
 }
 
 footer {
-  background-color: #333;
+  background-image: url("img/footer1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-color: #333; */
   color: #fff;
   padding: 10px;
   text-align: center;
@@ -81,7 +85,7 @@ footer {
   }
 }
 
-/* Add custom style to make borders tight around the image */
+/* Make borders tight around the image */
 .img-tight-border {
   width: 100%;
   height: auto;
@@ -134,14 +138,6 @@ footer {
   }
 }
 
-/* Footer styles */
-footer {
-  background-image: url("img/footer1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 /* Remove the navbar's default margin-bottom and rounded borders */ 
 .navbar {
   margin-bottom: 0;
@@ -163,26 +159,101 @@ footer {
   padding: 10px;
 }
 
-/* 自定義可見於大型螢幕的 CSS 類 */
+/* Custom visible style in large screen */
 .visible-lg-custom {
-  display: none; /* 首先將它設為隱藏 */
+  display: none; /* Default hide in large screen */
 }
 
-/* 在螢幕寬度大於768像素時顯示 */
 @media (min-width: 768px) {
   .visible-lg-custom {
-      display: block; /* 顯示在大型螢幕上 */
+      display: block; /* Display in large screen */
   }
 }
 
-/* 自定義小型螢幕的 CSS 類 */
+/* Custom visible style in xs screen */
 .visible-xs-custom {
-  display: none; /* 首先將它設為隱藏 */
+  display: none; /* Default hide in xs screen */
 }
 
-/* 在螢幕寬度小於768像素時顯示 */
 @media (max-width: 767px) {
   .visible-xs-custom {
-      display: block; /* 顯示在小型螢幕上 */
+      display: block; /* Display in xs screen */
+  }
+}
+
+/* Carousel */
+.carousel-control {
+  width: 4%;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  margin-left: 15px;
+  background-image: none;
+}
+
+@media (max-width: 767px) {
+  .carousel-inner .active.left {
+    left: -100%;
+  }
+
+  .carousel-inner .next {
+    left: 100%;
+  }
+
+  .carousel-inner .prev {
+    left: -100%;
+  }
+
+  .active>div {
+    display: none;
+  }
+
+  .active>div:first-child {
+    display: block;
+  }
+
+}
+
+@media (min-width: 767px) and (max-width: 992px) {
+  .carousel-inner .active.left {
+    left: -50%;
+  }
+
+  .carousel-inner .next {
+    left: 50%;
+  }
+
+  .carousel-inner .prev {
+    left: -50%;
+  }
+
+  .active>div {
+    display: none;
+  }
+
+  .active>div:first-child {
+    display: block;
+  }
+
+  .active>div:first-child+div {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-inner .active.left {
+    /* left: -16.7%; */
+    left: -25.0%;
+  }
+
+  .carousel-inner .next {
+    /* left: 16.7%; */
+    left: 25.0%;
+  }
+
+  .carousel-inner .prev {
+    /* left: -16.7%; */
+    left: -25.0%;
   }
 }
