@@ -36,18 +36,11 @@ body {
   font-weight: bold;
 }
 
-li > .nav-dorpdown-font {
+li .nav-dorpdown-font {
   font-size: 20px;
 }
 
-/* header {
-  background-color: #007bff;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-} */
-
-section {
+.content-padding {
   padding: 40px;
 }
 
@@ -58,7 +51,7 @@ section {
   display: inline-block; padding-bottom: 5px;
 }
 
-.content-text p, li {
+.content-text p, .content-text li {
   margin-top: 25px;
   font-size: 20px;
 }
