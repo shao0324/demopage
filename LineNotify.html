@@ -4,29 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>表单示例</title>
+    <title>Line Notify</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 
 <body>
 
     <div class="container">
-        <h2>表单示例</h2>
+        <h2>線上諮詢服務表單</h2>
         <form id="myForm">
             <div class="form-group">
-                <label for="name">姓名:</label>
+                <label for="name">姓名：</label>
                 <input type="text" class="form-control" id="name" name="name" required>
             </div>
             <div class="form-group">
-                <label for="phone">联系电话:</label>
+                <label for="phone">聯絡電話：</label>
                 <input type="text" class="form-control" id="phone" name="phone" required>
             </div>
             <div class="form-group">
-                <label for="email">电子邮件:</label>
+                <label for="email">電子信箱：</label>
                 <input type="email" class="form-control" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="requirement">您的需求:</label>
+                <label for="requirement">您的需求：</label>
                 <textarea class="form-control" id="requirement" name="requirement"></textarea>
             </div>
             <button type="button" class="btn btn-primary" onclick="validateForm()">送出</button>
@@ -43,7 +43,7 @@
             var requirement = document.getElementById("requirement").value;
             var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-            if (name.trim() === '' || phone.trim() === '' || email.trim() === '') {
+            if (name.trim() === '' || phone.trim() === '' || email.trim() === '' || requirement.trim() === '') {
                 alert("姓名、联系电话和电子邮件为必填字段。");
                 return;
             }
@@ -53,7 +53,7 @@
                 return;
             }
 
-            var message = 'message=' + '姓名: ' + name + '\n联系电话: ' + phone + '\n电子邮件: ' + email + '\n您的需求: ' + requirement
+            var message = '%0A%0D' + '姓名：' + name + '%0A%0D聯絡電話：' + phone + '%0A%0D電子信箱：' + email + '%0A%0D您的需求：' + requirement
 
             console.log("姓名: " + name);
             console.log("联系电话: " + phone);
@@ -61,7 +61,7 @@
             console.log("您的需求: " + requirement);
 
             // Line Notify
-            sendToServer(message, token, data => {
+            sendToServer(message, data => {
                 data = JSON.parse(data)
                 if (data.success) {
                     document.getElementById('result').innerHTML = '成功'
@@ -72,7 +72,7 @@
         }
     </script>
 
-    <script src="https://www.google.com/recaptcha/api.js?render={6LdukqgpAAAAAK80KgdSdoHUqT9rPQf5jujUG7hD}"></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js?render={6LdukqgpAAAAAK80KgdSdoHUqT9rPQf5jujUG7hD}"></script>
     <script>
         let token
 
@@ -81,12 +81,12 @@
                 token = t
             })
         })
-    </script>
+    </script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/mini-xhr@0/build/miniXhr.js"></script>
     <script>
-        function sendToServer(message, token, callback) {
-            miniXhr('https://script.google.com/macros/s/AKfycbx1DeLqI7WPHGs74Hz4TO3AhQT0oY5JVNs4FE_XSsSpxKePwKsZ-rzFr4baj2g_0bGN7g/exec?token=' + token + '&message' + message, {}
+        function sendToServer(message, callback) {
+            miniXhr('https://script.google.com/macros/s/AKfycbwZd4KHob2zsX_tfOahmYfcsvQXAwBcbKQdxNo9Ypj5Ea-BVebzPqKN_emxHXkOMPKUQA/exec?message=' + message, {}
             ).then(callback)
         }
     </script>
