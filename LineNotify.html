@@ -14,20 +14,20 @@
         <h2>線上諮詢服務表單</h2>
         <form id="myForm">
             <div class="form-group">
-                <label for="name">姓名：</label>
+                <label for="name">姓名/公司名稱：<span style="color: red;">*</span></label>
                 <input type="text" class="form-control" id="name" name="name" required>
             </div>
             <div class="form-group">
                 <label for="phone">聯絡電話：</label>
-                <input type="text" class="form-control" id="phone" name="phone" required>
+                <input type="text" class="form-control" id="phone" name="phone" required placeholder="09xx-xxx-xxx 或 02-xxxxxxxx">
             </div>
             <div class="form-group">
-                <label for="email">電子信箱：</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <label for="email">電子信箱：<span style="color: red;">*</span></label>
+                <input type="email" class="form-control" id="email" name="email" required placeholder="sample@mail.com.tw">
             </div>
             <div class="form-group">
-                <label for="requirement">您的需求：</label>
-                <textarea class="form-control" id="requirement" name="requirement"></textarea>
+                <label for="requirement">您的需求：<span style="color: red;">*</span></label>
+                <textarea class="form-control" style="height: 200px" id="requirement" name="requirement"></textarea>
             </div>
             <button type="button" class="btn btn-primary" onclick="validateForm()">送出</button>
         </form>
@@ -35,32 +35,45 @@
         <div id="result"></div>
     </div>
 
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/masking-input.js" data-autoinit="true"></script>
+
     <script>
         function validateForm() {
             var name = document.getElementById("name").value;
             var phone = document.getElementById("phone").value;
             var email = document.getElementById("email").value;
             var requirement = document.getElementById("requirement").value;
+            var message = '';
+            var phonePattern = /(\d{2,3}-?|\(\d{2,3}\))\d{3,4}-?\d{4}|09\d{2}(\d{6}|-\d{3}-\d{3})/g;
             var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var replacePattern = /(\n\r|\r\n|\r|\n)/g;
 
             if (name.trim() === '' || phone.trim() === '' || email.trim() === '' || requirement.trim() === '') {
-                alert("姓名、联系电话和电子邮件为必填字段。");
+                alert("姓名/公司名稱、聯絡電話和電子信箱為必填。");
                 return;
             }
 
             if (!emailPattern.test(email)) {
-                alert("请输入有效的电子邮件地址。");
+                alert("請輸入正確的電子信箱格式。範例：sample@mail.com.tw");
                 return;
             }
 
-            var message = '%0A%0D' + '姓名：' + name + '%0A%0D聯絡電話：' + phone + '%0A%0D電子信箱：' + email + '%0A%0D您的需求：' + requirement
+            // https://medium.com/@koten0224/regex-%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E9%9B%BB%E8%A9%B1%E8%99%9F%E7%A2%BC-5bacf88eae8d
+            if (!phonePattern.test(phone)) {
+                alert("請輸入正確的電話號碼格式。範例：09xx-xxx-xxx 或 02-xxxxxxxx");
+                return;
+            }
 
-            console.log("姓名: " + name);
-            console.log("联系电话: " + phone);
-            console.log("电子邮件: " + email);
-            console.log("您的需求: " + requirement);
+            requirement = requirement.replace(replacePattern, '%0A%0D');
+            message = '%0A%0D' + '姓名/公司名稱：' + name + '%0A%0D聯絡電話：' + phone + '%0A%0D電子信箱：' + email + '%0A%0D客戶需求：%0A%0D' + requirement
+
+            console.log("姓名/公司名稱：" + name);
+            console.log("聯絡電話：" + phone);
+            console.log("電子信箱：" + email);
+            console.log("您的需求：" + requirement);
 
             // Line Notify
+            // https://limaois.me/archives/52
             sendToServer(message, data => {
                 data = JSON.parse(data)
                 if (data.success) {
