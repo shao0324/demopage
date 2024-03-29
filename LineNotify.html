@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单示例</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>表单示例</h2>
+        <form id="myForm">
+            <div class="form-group">
+                <label for="name">姓名:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">联系电话:</label>
+                <input type="text" class="form-control" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">电子邮件:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="requirement">您的需求:</label>
+                <textarea class="form-control" id="requirement" name="requirement"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="validateForm()">送出</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var requirement = document.getElementById("requirement").value;
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (name.trim() === '' || phone.trim() === '' || email.trim() === '') {
+                alert("姓名、联系电话和电子邮件为必填字段。");
+                return;
+            }
+
+            if (!emailPattern.test(email)) {
+                alert("请输入有效的电子邮件地址。");
+                return;
+            }
+
+            var message = 'message=' + '姓名: ' + name + '\n联系电话: ' + phone + '\n电子邮件: ' + email + '\n您的需求: ' + requirement
+
+            console.log("姓名: " + name);
+            console.log("联系电话: " + phone);
+            console.log("电子邮件: " + email);
+            console.log("您的需求: " + requirement);
+
+            // Line Notify
+            sendToServer(message, token, data => {
+                data = JSON.parse(data)
+                if (data.success) {
+                    document.getElementById('result').innerHTML = '成功'
+                } else {
+                    document.getElementById('result').innerHTML = '失敗：' + data.error
+                }
+            })
+        }
+    </script>
+
+    <script src="https://www.google.com/recaptcha/api.js?render={6LdukqgpAAAAAK80KgdSdoHUqT9rPQf5jujUG7hD}"></script>
+    <script>
+        let token
+
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LdukqgpAAAAAK80KgdSdoHUqT9rPQf5jujUG7hD', { action: 'LIME' }).then(function (t) {
+                token = t
+            })
+        })
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/mini-xhr@0/build/miniXhr.js"></script>
+    <script>
+        function sendToServer(message, token, callback) {
+            miniXhr('https://script.google.com/macros/s/AKfycbxY0C9ZCpAi8LHoUCJvTtoloRBBAksxJwBcEC9IUs15jaxjnC65Qj2sTQRcyiAwGcccFA/exec?token=' + token + '&message' + message, {}
+            ).then(callback)
+        }
+    </script>
+
+</body>
+
+</html>
