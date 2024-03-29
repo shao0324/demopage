@@ -20,7 +20,8 @@
 
 <body>
 
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myTabs">
@@ -37,15 +38,17 @@
       </div>
       
       <div class="collapse navbar-collapse" id="myTabs">
-        <ul class="nav navbar-nav navbar-right pull-right" style="margin-top: 20px; margin-bottom: 20px; margin-right: 100px;" id="#menu-main">
+        <!-- <ul class="nav navbar-nav navbar-right pull-right" style="margin-top: 20px; margin-bottom: 20px; margin-right: 100px;" id="#menu-main"> -->
+        <ul class="nav navbar-nav navbar-right navbar-style-custom" id="#menu-main">
           <li class="nav-item">
             <a class="nav-link active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="true">公司介紹</a>
           </li>
           <li class="dropdown">
-            <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">服務項目<b class="caret"></b></a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-              <li><a href="#series-a" tabindex="-1" data-toggle="tab">Series A</a></li>
-              <li><a href="#series-b" tabindex="-1" data-toggle="tab">Series B</a></li>
+            <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">產品服務<b class="caret"></b></a>
+            <ul class="dropdown-menu nav-dorpdown-font" role="menu" aria-labelledby="myTabDrop1">
+              <li><a href="#processing" tabindex="-1" data-toggle="tab">製程介紹</a></li>
+              <li><a href="#service" tabindex="-1" data-toggle="tab">服務項目</a></li>
+              <li><a href="#product" tabindex="-1" data-toggle="tab">成品展示</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -130,11 +133,10 @@
 
   <div class="jumbotron text-center">
   <!-- Banner with Slogan -->
-    <!-- <div class="banner"> -->
     <div class="banner">
-      <img src="img/banner1-lg.jpg" class="img-responsive visible-lg-custom" style="width:100%; height:auto;" alt="Image 4">
+      <img src="img/banner2-lg.jpg" class="img-responsive visible-lg-custom" style="width:100%; height:auto;" alt="Image 4">
       <!-- <img src="img/banner1-md.jpg" class="img-responsive visible-md" style="width:100%; height:auto;" alt="Image 4"> -->
-      <img src="img/banner1-md.jpg" class="img-responsive visible-xs" style="width:100%; height:auto;" alt="Image 4">
+      <img src="img/banner2-md.jpg" class="img-responsive visible-xs" style="width:100%; height:auto;" alt="Image 4">
       <div class="slogan">
         <h1 class="invisible-xs-text" style="font-weight: bolder">台屹科技</h1>
         <h3 class="invisible-xs-text" style="font-weight: bolder">品質第一 服務至上</h3>
@@ -147,67 +149,63 @@
     </div>
   </div>
 
-  <!-- Tab control -->
   <div class="container mt-5">
     
+  <!-- Tab control -->
     <div class="tab-content">
 
-      <!-- About Us -->
+      <!-- 公司介紹 -->
       <div class="tab-pane fade in active" id="about" role="tabpanel" aria-labelledby="about-tab">
-        <div class="container" style="padding-right: 75px">
-          <h2 style="margin-top: 25px; border-bottom: 5px solid #2421b1; display: inline-block; padding-bottom: 5px;">關於台屹科技</h2>
+        <div class="container">
+          <div>
+            <h2 class="content-title">關於台屹科技</h2>
+          </div>
           <div class="row">
-            <div class="col-sm-6">
-              <p style="margin-top: 25px">台屹科技位於台灣北部新北市五股，專注於提供多項精密加工製造服務，包括CNC電腦銑床、3D、4D程式設計，以及四軸半模具雕刻等。公司致力於打造產業一條龍，為客戶提供穩定、準確的精密產品。</p>
-              <p style="margin-top: 25px">公司擁有專業的技術團隊和先進的設備，例如百德QUASER、永進YCM和日本brother立式加工機等。透過搭載NIKKEN等級的第四軸和導入MASTER CAM系統，我們能夠有效地滿足客戶對高精度、高效率加工的需求，並提高產品的穩定性和良率。</p>
-              <p style="margin-top: 25px">台屹科技成立於民國95年，擁有近20年的歷史。我們秉持著「品質第一」的經營理念，堅持誠信經營，並以服務至上的態度滿足客戶的各式客製化加工製造需求。作為國內各大廠的合作夥伴之一，我們以專業用心和誠信態度贏得了客戶的信賴與肯定。</p>
-              <p style="margin-top: 25px">我們將持續努力，為客戶提供最完善的服務，以實踐台屹科技的永續經營理念，並在業界贏得良好口碑。</p>
+            <div class="col-sm-6 content-text content-padding">
+              <p>台屹科技位於台灣北部新北市五股，專注於提供多項精密加工製造服務，包括CNC電腦銑床、3D、4D程式設計，以及四軸半模具雕刻等。公司致力於打造產業一條龍，為客戶提供穩定、準確的精密產品。</p>
+              <p>公司擁有專業的技術團隊和先進的設備，例如百德QUASER、永進YCM和日本brother立式加工機等。透過搭載NIKKEN等級的第四軸和導入MASTER CAM系統，我們能夠有效地滿足客戶對高精度、高效率加工的需求，並提高產品的穩定性和良率。</p>
+              <p>台屹科技成立於民國95年，擁有近20年的歷史。我們秉持著「品質第一」的經營理念，堅持誠信經營，並以服務至上的態度滿足客戶的各式客製化加工製造需求。作為國內各大廠的合作夥伴之一，我們以專業用心和誠信態度贏得了客戶的信賴與肯定。</p>
+              <p>我們將持續努力，為客戶提供最完善的服務，以實踐台屹科技的永續經營理念，並在業界贏得良好口碑。</p>
             </div>
-            <div class="col-sm-6">
-              <!-- <img src="img/about.jpg" alt="Image 3" class="img-thumbnail" style="margin: 20px" data-toggle="modal"
-                data-target="#imageModal" data-description="Description for Image 3"> -->
-                <img src="img/about1.jpg" alt="about" class="img-tight-border" align="middle"/>
+            <div class="col-sm-6 img-container content-padding">
+                <img src="img/about1.jpg" alt="about" style="width: 80%; height: auto;"/>
             </div>
           </div>
 
-          <section>
-            <!-- Empty space -->
-          </section>
-        
           <!-- Carousel -->
-          <div class="col-md-10 col-md-offset-1">
+          <div class="col-md-10 col-md-offset-1 content-padding">
             <div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="3000" id="myCarousel">
               <div class="carousel-inner">
                 <div class="item active">
-                  <div class="col-md-4 col-sm-6 col-xs-12"><img src="img/scene01.jpg" class="img-responsive img-thumbnail" data-toggle="modal" data-target="#imageModal" data-description="Description for production B01">
+                  <div class="col-md-4 col-sm-6 col-xs-12"><a target="_new" href="img/scene01-origin.jpg"><img src="img/scene01-cropped.jpg" class="img-responsive"></a>
                   </div>
                 </div>
                 <div class="item">
-                  <div class="col-md-4 col-sm-6 col-xs-12"><a href="#"><img src="img/scene02.jpg" class="img-responsive"></a>
+                  <div class="col-md-4 col-sm-6 col-xs-12"><a target="_new" href="img/scene02-origin.jpg"><img src="img/scene02-cropped.jpg" class="img-responsive"></a>
                   </div>
                 </div>
                 <div class="item">
-                  <div class="col-md-4 col-sm-6 col-xs-12"><a href="#"><img src="img/scene03.jpg" class="img-responsive"></a>
+                  <div class="col-md-4 col-sm-6 col-xs-12"><a target="_new" href="img/scene03-origin.jpg"><img src="img/scene03-cropped.jpg" class="img-responsive"></a>
                   </div>
                 </div>
                 <div class="item">
-                  <div class="col-md-4 col-sm-6 col-xs-12"><a href="#"><img src="img/scene04.jpg" class="img-responsive"></a>
+                  <div class="col-md-4 col-sm-6 col-xs-12"><a target="_new" href="img/scene04-origin.jpg"><img src="img/scene04-cropped.jpg" class="img-responsive"></a>
                   </div>
                 </div>
                 <div class="item">
-                  <div class="col-md-4 col-sm-6 col-xs-12"><a href="#"><img src="img/scene05.jpg" class="img-responsive"></a>
+                  <div class="col-md-4 col-sm-6 col-xs-12"><a target="_new" href="img/scene05-origin.jpg"><img src="img/scene05-cropped.jpg" class="img-responsive"></a>
                   </div>
                 </div>
                 <div class="item">
-                  <div class="col-md-4 col-sm-6 col-xs-12"><a href="#"><img src="img/scene06.jpg" class="img-responsive"></a>
+                  <div class="col-md-4 col-sm-6 col-xs-12"><a target="_new" href="img/scene06-origin.jpg"><img src="img/scene06-cropped.jpg" class="img-responsive"></a>
                   </div>
                 </div>
                 <div class="item">
-                  <div class="col-md-4 col-sm-6 col-xs-12"><a href="#"><img src="img/scene07.jpg" class="img-responsive"></a>
+                  <div class="col-md-4 col-sm-6 col-xs-12"><a target="_new" href="img/scene07-origin.jpg"><img src="img/scene07-cropped.jpg" class="img-responsive"></a>
                   </div>
                 </div>
                 <div class="item">
-                  <div class="col-md-4 col-sm-6 col-xs-12"><a href="#"><img src="img/scene08.jpg" class="img-responsive"></a>
+                  <div class="col-md-4 col-sm-6 col-xs-12"><a target="_new" href="img/scene08-origin.jpg"><img src="img/scene08-cropped.jpg" class="img-responsive"></a>
                   </div>
                 </div>
               </div>
@@ -220,10 +218,6 @@
 
         </div>
 
-        <section>
-          <!-- Empty space -->
-        </section>
-      
         <!-- <div classl style="list-style-type: none; padding: 0;">
                  ="container" style="padding-right: 75px">
           <div class="row" style="padding: 20px">
@@ -276,9 +270,59 @@
 
       </div>
 
-      <!-- Product Series A -->
-      <div class="tab-pane fade" id="series-a" role="tabpanel" aria-labelledby="series-a-tab">
-        <div class="container" style="padding-right: 50px">
+      <!-- 服務介紹 -->
+      <div class="tab-pane fade" id="processing" role="tabpanel" aria-labelledby="processing-tab">
+        <div class="container">
+
+          <div>
+            <h2 class="content-title">銑床是什麼？</h2>
+          </div>
+          <div class="row content-padding">
+            <div class="content-text">
+              <p>銑床為工具機的一種，通常用於金屬的切削，與車床最明顯的差異在於刀具的旋轉，而不是依靠工件旋轉。銑床至少會有X、Ｙ與Z三個軸，但也能有額外的旋轉軸，像是五軸就是具有三個線性軸與兩個旋轉軸，能讓刀具在180度半球或更多半球上運作。</p>
+              <p>銑床用來切削平面，或能透過特殊形狀的銑刀銑出成型的表面、螺旋槽或齒輪的齒型等，銑削時，將工件裝至工作檯或分度頭上，銑刀則以旋轉的方式做切削運動，輔以工作檯做進給運動，這種以銑刀作為刀具在工件表面加工的方式就是我們所稱的銑削。</p>
+            </div>
+          </div>
+          
+          <div>
+            <h2 class="content-title">銑床的加工種類</h2>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 content-text content-padding">
+              <li>立式銑床加工</li>
+              <p>此種加工刀具轉軸為直立位置，轉軸刀具頭可旋轉，並設定在垂直面上，質軸也可做短距離的上下移動，有利於分層銑切，有些甚至有旋轉附件或工作檯，可銑切圓形槽或連續小量生產的零件。</p>
+              
+              <li>萬能銑床加工</li>
+              <p>此種為最多用處的銑床，可縱向、橫向與垂直之外，也可在水平方向左右迴轉各45度，並配合床台三種方向的進刀，使之能用多種銑刀來滿足不同的條件與需要。</p>
+              <li>臥式銑床加工</li>
+              <p>此機器用來銑削大量材料的大型工件，並準確地複製曲面與輪廓，以縱向運動方式及適當的速度進給到旋轉的銑刀。</p>
+            </div>
+            <div class="col-sm-6 img-container content-padding">
+              <img src="https://placehold.jp/450x300.png" alt="about" style="width: 80%; height: auto;"/>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="content-title">不同類型的銑床</h2>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 content-text content-padding">
+              <p>銑床會因加工類型不同而分為多種，像是床身式銑床、平面銑床、專用銑床等，於上述可知根據各形式主軸的位置與方向可分為立式與臥式。</p>
+              <li>三軸銑床：一般機床擁有三個軸，三軸加工由直線進給軸X、Y與Ｚ執行，此三軸分別為工件平台可以左右（1軸）與前後移動（2軸），主軸頭（3軸）則是用於切割工件。</li>
+              <li>四軸銑床：四軸是將數控分度盤加裝在綜合加工機上，使其可根據迴轉軸組成四軸都同時運作的四軸加工機。</li>
+              <li>五軸銑床：五軸是最適合用於自由曲面或複合曲面的加工方法之一，隨著渦輪葉片、精密模具等複雜幾何形狀又高精度的加工製造需求越來越多，傳統的三軸與四軸在精度上可能不太能滿足加工要求，因此多軸加工將會是未來的趨勢，而五軸加工方式是以進給軸X、Y、Z與迴轉軸A、B、C繞著X、Y、Z之間的任意五個軸直線插補運作，可以沿著整個路徑移動的過程信行優化，刀具可同時進行線性移動並在整個路徑上保持切削的狀態。</li>
+            </div>
+            <div class="col-sm-6 img-container content-padding">
+              <img src="https://placehold.jp/450x300.png" alt="about" style="width: 80%; height: auto;"/>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 產品介紹 -->
+      <div class="tab-pane fade" id="product" role="tabpanel" aria-labelledby="product-tab">
+        <div class="container content-padding">
           <div class="row">
             <div class="col-sm-4" style="padding: 20px">
               <img src="img/a-prod-01.png" alt="A01" class="img-thumbnail" data-toggle="modal" data-target="#imageModal" data-description="Description for production A01">
@@ -318,53 +362,15 @@
             </div>
           </div>
         </div>
+        
       </div>
 
-      <!-- Product Series B -->
-      <div class="tab-pane fade" id="series-b" role="tabpanel" aria-labelledby="imageModalLabel">
-        <div class="container" style="padding-right: 50px">
-          <div class="row">
-            <div class="col-sm-4" style="padding: 20px">
-              <img src="img/b-prod-01.jpg" alt="B01" class="img-thumbnail" data-toggle="modal" data-target="#imageModal" data-description="Description for production B01">
-              <h3>B01</h3>
-              <p>Production description for B01</p>
-              <p>Production description for B01</p>
-            </div>
-            <div class="col-sm-4" style="padding: 20px">
-              <img src="img/b-prod-02.jpg" alt="B02" class="img-thumbnail" data-toggle="modal" data-target="#imageModal" data-description="Description for production B02">
-              <h3>B02</h3>
-              <p>Production description for B02</p>
-              <p>Production description for B02</p>
-            </div>
-            <div class="col-sm-4" style="padding: 20px">
-              <img src="img/b-prod-03.jpg" alt="B03" class="img-thumbnail" data-toggle="modal" data-target="#imageModal" data-description="Description for production B03">
-              <h3>B03</h3>
-              <p>Production description for B03</p>
-              <p>Production description for B03</p>
-            </div>
-            <div class="col-sm-4" style="padding: 20px">
-              <img src="img/b-prod-04.jpg" alt="B04" class="img-thumbnail" data-toggle="modal" data-target="#imageModal" data-description="Description for production B04">
-              <h3>B04</h3>
-              <p>Production description for B04</p>
-              <p>Production description for B04</p>
-            </div>
-            <div class="col-sm-4" style="padding: 20px">
-              <img src="img/b-prod-05.jpg" alt="B05" class="img-thumbnail" data-toggle="modal" data-target="#imageModal" data-description="Description for production B05">
-              <h3>B05</h3>
-              <p>Production description for B05</p>
-              <p>Production description for B05</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Contact -->
-      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-
+      <!-- 聯絡我們 -->
+      <div class="tab-pane fade content-padding" id="contact" role="tabpanel" aria-labelledby="contact-tab">
         <!-- Google Form -->
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLScI7LqUM6m30nsq_tmOId76BFqrywb7ieK7HF7tI_5PfRI4pw/viewform?embedded=true"
-          width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">載入中…
+          width="100%" height="1000px" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">載入中…
         </iframe>
 
         <!-- Facebook Comments -->
@@ -375,39 +381,6 @@
 
         <div class="fb-comments" data-href="https://shao0324.github.io/demopage/" data-width="auto" data-numposts="5">
         </div>
-
-        <!-- Disqus -->
-        <!-- <div id="disqus_thread"></div>
-        <script>
-          (function () { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://EXAMPLE.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> -->
-
-        <!-- Contact Form -->
-        <!-- <div class="container mt-5" style="padding-right: 75px">
-          <h2>Contact Us</h2>
-          <form>
-            <div class="form-group">
-              <label for="name">Your Name:</label>
-              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email address:</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message:</label>
-              <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div> -->
-
       </div>
     </div>
   </div>
